@@ -1,0 +1,9 @@
+* {
+background-attachment: fixed;
+background-image: linear-gradient(#C4B9C9, #595057);
+}
+main {
+  width: 50%;
+  margin: auto;
+  border: 1px solid white;
+}
