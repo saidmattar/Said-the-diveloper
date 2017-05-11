@@ -6,21 +6,43 @@
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
-  <script src="scripts/script.js"></script>
-  <link href="style.css" type="text/stylesheet" rel="stylesheet"/>
+    <script src="scripts/rawprojects.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/sreenview.js"></script>
+
+  <link href="stylesheets/base.css" type="text/css" rel="stylesheet"/>
+  <link href="stylesheets/layout.css" type="text/css" rel="stylesheet"/>
+  <link href="stylesheets/modules.css" type="text/css" rel="stylesheet"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
     <div>
-      <h1> Said Projects </h1>
-      <img src=""/>
-      <h2> Welcome to my page</h2>
-      <p></p>
+      <h1> Welcome To My World</h1>
+      <main>
+      <h2> The Future Of Responsiv Web Designs</h2>
+      <div></div>
+        <nav>
+          <ul>
+            <li><a href="#" data-tab="about">About</a></li>
+            <li><a href="#" data-tab="about">Work</a></li>
+            <li><a href="#" data-tab="about">Skils</a></li>
+            <li><a href="#" data-tab="about">Contact</a></li>
+          </ul>
+        </nav>
+        <section id="about" class="tab-content">About</section>
+        <section id="work" class="tab-content">
+          <article class="template">
+            <h3>title</h3>
+            <time>date</time>
+            <p>discription</p>
+            <a href="">Check It Out</a>
+          </article>
+        </section>
+        <section id="skills" class="tab-content">Skills</section>
+        <section id="contact" class="tab-content">
+          <a href="https://github.com/saidmattar">GitHubME!</a>
+        </section>
+      </main>
     </div>
-    <div>
-      <ul>
-        <li>about me</li>
-        <li>contact me</li>
-        <li>skills</li>
   </body>
 </html>
