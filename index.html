@@ -9,41 +9,53 @@
     <script src="scripts/rawprojects.js"></script>
     <script src="scripts/script.js"></script>
     <script src="scripts/sreenview.js"></script>
-
+    <script id="project-template" type="text/x-handlebars-template">
+      <h1>{{title}}</h1>
+      <time>{{publishedOn}}</time>
+      {{{discription}}}
+      <a href="{{projectUrl}}">You should Check that Out</a>
+    </script>
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css"/>
   <link href="stylesheets/base.css" type="text/css" rel="stylesheet"/>
   <link href="stylesheets/layout.css" type="text/css" rel="stylesheet"/>
   <link href="stylesheets/modules.css" type="text/css" rel="stylesheet"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
-  <body>
-    <div>
-      <h1> Welcome To My World</h1>
+  <body background="images/bodyimage.jpg">
+    <!-- <div> -->
+      <h1> Welcome To My World أهلا في عالمي</h1>
       <main>
       <h2> The Future Of Responsiv Web Designs</h2>
-      <div></div>
-        <nav>
-          <ul>
-            <li><a href="#" data-tab="about">About</a></li>
-            <li><a href="#" data-tab="about">Work</a></li>
-            <li><a href="#" data-tab="about">Skils</a></li>
-            <li><a href="#" data-tab="about">Contact</a></li>
-          </ul>
-        </nav>
-        <section id="about" class="tab-content">About</section>
+      <!-- <div></div> -->
+        <section id="about" class="tab-content">
+          <h4>About Said</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris dictum venenatis ipsum, sit amet tincidunt tellus volutpat in. Morbi tempus porta sapien eu aliquam. Maecenas blandit dignissim commodo. Nam sed nulla odio. Donec vel erat neque. Nam tempor sem elit, non fringilla libero vulputate sed. Donec in neque congue, ultrices est et, convallis nibh. Nulla vestibulum sit amet turpis nec dapibus. Cras dignissim, nunc id bibendum fermentum, ex eros egestas purus, ut pharetra leo nulla quis erat. Nulla tempus libero sit amet auctor luctus. Aliquam vel euismod nulla. Proin id urna nibh. Suspendisse vestibulum eu ipsum vitae egestas.
+
+Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse massa sapien, aliquet vel dolor et, vulputate feugiat velit. Morbi aliquam metus aliquam laoreet faucibus. Mauris sit amet pretium quam. Curabitur mollis ex dolor, quis consectetur turpis eleifend eu. Praesent pulvinar lobortis lorem non faucibus. Mauris a accumsan dolor, consequat accumsan diam.
+
+Integer luctus, lectus non iaculis lobortis, augue nulla accumsan urna, id cursus ante felis in ante. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam tempor, erat vel vehicula consectetur, felis eros dapibus lorem, non pretium magna ex in lectus. Aliquam venenatis lorem sed lacus dignissim, sit amet efficitur sapien mollis. Vestibulum rhoncus semper felis, in aliquet velit mattis ac. Phasellus sodales a risus sed rutrum. Vestibulum fringilla massa eget velit faucibus feugiat. Aenean at pharetra diam, ac pulvinar lacus. Nullam quis vulputate dolor, sit amet congue sapien.
+
+Donec elementum ante nec massa vestibulum, in gravida erat varius. Suspendisse pulvinar varius nisi, et dapibus</p>
+
+        </section>
         <section id="work" class="tab-content">
-          <article class="template">
-            <h3>title</h3>
-            <time>date</time>
-            <p>discription</p>
-            <a href="">Check It Out</a>
-          </article>
         </section>
         <section id="skills" class="tab-content">Skills</section>
         <section id="contact" class="tab-content">
-          <a href="https://github.com/saidmattar">GitHubME!</a>
+          <span class="fa fa-envelope-o">Said</span>
+          <a class="fa fa-github" href="https://github.com/saidmattar">GitHubME!</a>
         </section>
+        <nav>
+          <span  class="fa fa-bars" aria-hidden="true"></span>
+          <ul>
+            <li><a href="#" data-tab="about">About</a></li>
+            <li><a href="#" data-tab="work">Work</a></li>
+            <li><a href="#" data-tab="skills">Skills</a></li>
+            <li><a href="#" data-tab="contact">Contact</a></li>
+          </ul>
+        </nav>
       </main>
-    </div>
+    <!-- </div> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
   </body>
 </html>
