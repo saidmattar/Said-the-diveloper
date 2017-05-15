@@ -3,7 +3,7 @@ $(function() {
   var myProjects = [];
   function Project(rawProject) {
     this.title = rawProject.title;
-    this.discription = rawProject.discription;
+    this.description = rawProject.description;
     this.datedeveloped = rawProject.datedeveloped;
     this.projectUrl = rawProject.projectUrl;
   }
