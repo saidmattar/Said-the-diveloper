@@ -10,6 +10,7 @@ $(function() {
 
   var template = $('#project-template').html();
 
+// Just A thought, clean up any extra code or comments from your files! - T.Jay
   // gets template from html
   Project.prototype.toHtml = function() {
 
