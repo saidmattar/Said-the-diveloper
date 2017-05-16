@@ -1,4 +1,6 @@
-$(document).ready(function(){
+const screenView = {};
+
+screenView.initIndexPage = function(){
 
   $('nav .fa-bars').on('click',function(){
     if ($(this).hasClass('clicked')) {
@@ -23,4 +25,8 @@ $(document).ready(function(){
   })
 
   $('nav a:first').click();
-});
+
+  Project.all.forEach(function(project){
+    $('#work').append(project.toHtml());
+  });
+};
