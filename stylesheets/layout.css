@@ -1,0 +1,13 @@
+
+
+main {
+  width: 50%;
+  margin: auto;
+  border: 1px solid white;
+  height: 85%;
+}
+
+section {
+  height: 90%;
+  overflow: scroll;
+}

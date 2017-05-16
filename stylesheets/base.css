@@ -5,3 +5,17 @@
   box-sizing: border-box;
   text-align: center;
 }
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-attachment: fixed;
+  background: image(images/bodyimage.jpg);
+  background-size: 100% 100%;
+}
+
+li {
+  list-style: none;
+}

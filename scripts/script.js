@@ -3,23 +3,23 @@ $(function() {
   var myProjects = [];
   function Project(rawProject) {
     this.title = rawProject.title;
-    this.discription = rawProject.discription;
+    this.description = rawProject.description;
     this.datedeveloped = rawProject.datedeveloped;
-    this.projectUrl = rawProject.url;
+    this.projectUrl = rawProject.projectUrl;
   }
 
-  Project.prototype.toHtml = function() {
-    var $newPprojects = $('article.template').clone();
-    $newPprojects.removeClass('template');
+  var template = $('#project-template').html();
 
-    $newPprojects.find('a').attr('href', this.projectUrl);
-    $newPprojects.find('h3').html(this.title);
-    $newPprojects.find('p').html(this.discription);
-    $newPprojects.find('time').attr('datetime', this.datedeveloped);
-    $newPprojects.find('time').attr('title', this.datedeveloped);
-    $newPprojects.find('time').html('about ' + parseInt((new Date() - new Date(this.datedeveloped))/60/60/24/1000) + ' days ago');
-    $newPprojects.append('<hr>');
-    return $newPprojects;
+  // gets template from html
+  Project.prototype.toHtml = function() {
+
+    // compiles template using Handlebars
+    var templateRender = Handlebars.compile(template);
+
+    this.daysAgo = parseInt((new Date() - new Date(this.datedeveloped))/60/60/24/1000);
+    this.publishedOn = this.datedeveloped ? `published ${this.daysAgo} days ago` : '(draft)';
+
+    return templateRender(this);
   };
 
   rawData.sort(function(a,b) {

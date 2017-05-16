@@ -1,0 +1,52 @@
+.fa-bars {
+  font-size: 40px;
+  position: fixed;
+  top: 61px;
+  right: 15px;
+  width: auto;
+}
+
+h1 {
+  color: #AD1F1F;
+  font:
+}
+
+h2 {
+  color: #423131;
+  background-color: rgba(0,0,0,.3);
+}
+
+nav ul {
+  background-color: rgba(0,0,0,.7);
+}
+nav ul {
+  position: fixed;
+  top:-250px;
+  right:-250px;
+  width: auto;
+}
+
+nav a {
+  color: #D3D4D6;
+}
+
+nav li {
+  position: block;
+  width: auto;
+}
+@media screen and (min-width:640px) {
+  .fa-bars {
+    display: none;
+  }
+  nav ul {
+    position: static;
+  }
+  nav li {
+    display:inline;
+  }
+}
+
+#work a {
+  color: #3B4659;
+  font-weight: bold;
+}
