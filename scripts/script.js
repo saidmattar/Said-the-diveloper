@@ -1,4 +1,4 @@
-'use script';
+'use strict';
 $(function() {
   var myProjects = [];
   function Project(rawProject) {
