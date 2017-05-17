@@ -1,4 +1,4 @@
-'use script';
+'use strict';
 
 function Project(rawProject) {
   this.title = rawProject.title;
