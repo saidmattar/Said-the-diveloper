@@ -1,0 +1,27 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "it is my software projects that I have created and some career related information about me",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saidmattar/portfolio.git"
+  },
+  "keywords": [
+    "said's",
+    "projects"
+  ],
+  "author": "Said",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saidmattar/portfolio/issues"
+  },
+  "homepage": "https://github.com/saidmattar/portfolio#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
