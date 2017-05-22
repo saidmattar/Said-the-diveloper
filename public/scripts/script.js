@@ -7,8 +7,6 @@ function Project(rawProject) {
   this.projectUrl = rawProject.projectUrl;
 }
 Project.all = [];
-
-
 Project.prototype.toHtml = function() {
   var template = $('#project-template').html();
   // compiles template using Handlebars
@@ -22,8 +20,8 @@ Project.loadAll = function(rawData) {
   rawData.sort(function(a,b) {
     return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
   });
-  rawData.forEach(function(ele) {
-    Project.all.push(new Project(ele));
+  Project.all = rawData.map(function(ele) {
+    return (new Project(ele));
   })
 }
 
