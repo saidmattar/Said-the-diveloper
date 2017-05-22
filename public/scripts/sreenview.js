@@ -26,7 +26,7 @@ screenView.initIndexPage = function(){
 
   $('nav a:first').click();
 
-  Project.all.forEach(function(project){
+  app.Project.all.forEach(function(project){
     $('#work').append(project.toHtml());
   });
 };
