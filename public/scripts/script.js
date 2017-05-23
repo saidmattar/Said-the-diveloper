@@ -6,6 +6,7 @@ var app = app || {};
     this.description = rawProject.description;
     this.datedeveloped = rawProject.datedeveloped;
     this.projectUrl = rawProject.projectUrl;
+    this.collaborators = rawProject.collaborators;
   }
   Project.all = [];
   Project.prototype.toHtml = function() {
@@ -16,6 +17,19 @@ var app = app || {};
     this.publishedOn = this.datedeveloped ? `published ${this.daysAgo} days ago` : '(draft)';
     return templateRender(this);
   };
+
+  Project.allCollaborators = () => {
+    return Project.all.map(function(data){
+      return data.project
+    })
+    .reduce(function(uniqueCollaborators, current){
+      if (uniqueCollaborators.indexOf(current) === -1){
+        uniqueCollaborators.push(current)
+      }
+      return uniqueCollaborators;
+    },[])
+  }
+
   Project.loadAll = function(rawData) {
     rawData.sort(function(a,b) {
       return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
