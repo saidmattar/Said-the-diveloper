@@ -29,4 +29,5 @@ screenView.initIndexPage = function(){
   app.Project.all.forEach(function(project){
     $('#work').append(project.toHtml());
   });
+  $('#collaborators').text(app.Project.allCollaborators().length);
 };

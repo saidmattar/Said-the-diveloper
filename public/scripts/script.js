@@ -20,8 +20,11 @@ var app = app || {};
 
   Project.allCollaborators = () => {
     return Project.all.map(function(data){
-      return data.project
+      return data.collaborators;
     })
+    .reduce(function(collaboratorsNames, current){
+      return collaboratorsNames.concat(current)
+    }, [])
     .reduce(function(uniqueCollaborators, current){
       if (uniqueCollaborators.indexOf(current) === -1){
         uniqueCollaborators.push(current)
