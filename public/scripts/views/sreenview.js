@@ -17,17 +17,9 @@ screenView.initIndexPage = function(){
       $(this).toggleClass('clicked');
     }
   })
-
-  $('nav a').on('click', function() {
-    var $whereToGo = $(this).data('tab')
-    $('.tab-content').hide()
-    $('#' + $whereToGo).fadeIn(750)
-  })
-
-  $('nav a:first').click();
-
   app.Project.all.forEach(function(project){
     $('#work').append(project.toHtml());
   });
   $('#collaborators').text(app.Project.allCollaborators().length);
+  console.log('init');
 };
