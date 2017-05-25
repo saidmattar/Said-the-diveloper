@@ -42,9 +42,10 @@ var app = app || {};
     })
   }
   Project.fetchAll = function() {
+    console.log('fetch');
     if (localStorage.rawData) {
       Project.loadAll(JSON.parse(localStorage.rawData));
-      screenView.initIndexPage(localStorage.rawData);
+      screenView.initIndexPage();
     } else {
       $.getJSON('data/rawprojects.json')
       .done(function(data){
