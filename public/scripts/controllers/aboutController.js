@@ -6,6 +6,7 @@ var app = app || {};
     console.log('it works - article controller');
     $('.tab-content').hide();
     $('#about').fadeIn(750);
+    app.repos.requestRepos(app.repoView.index);
   };
   module.aboutController = aboutController;
 })(app);

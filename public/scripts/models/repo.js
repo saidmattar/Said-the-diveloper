@@ -13,8 +13,8 @@ var app = app || {};
     })
     .then(data => {
       data.forEach (repoData => repos.all.push(repoData))
+      callback();
     })
-    callback();
   }
   repos.with = attr => repos.all.filter(repo => repo[attr]);
   module.repos = repos;
