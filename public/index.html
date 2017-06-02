@@ -19,6 +19,22 @@
     <link href="stylesheets/layout.css" type="text/css" rel="stylesheet"/>
     <link href="stylesheets/modules.css" type="text/css" rel="stylesheet"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script id="repo-template" type="text/x-handlebars-template">
+          <li>
+            <a href="{{html_url}}" target="_blank">
+              <h3>{{name}}</h3>
+            </a>
+            <p>Description: {{description}}</p>
+            <p>Language: {{language}}</p>
+            <p>Created: {{created_at}}</p>
+            <p>Last updated: {{updated_at}}</p>
+            {{#if watchers_count}}
+              <p>{{watchers_count}} watching this repo</p>
+            {{/if}}
+          </li>
+        </script>
+
   </head>
   <body background="images/bodyimage.jpg">
     <h1> Welcome To My World أهلا في عالمي</h1>
@@ -26,6 +42,16 @@
       <h2> The Future Of Responsive Web Designs</h2>
       <section id="about" class="tab-content">
         <h4>About Said</h4>
+
+                <header>
+                  Welcome to my Webpage.
+                </header>
+                  <h1>Some of my intrests:</h1>
+                  <ul>
+                    <li>Coding</li>
+                    <li>Sharing what I've learned</li>
+                  </ul>
+
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris dictum venenatis ipsum, sit amet tincidunt tellus volutpat in. Morbi tempus porta sapien eu aliquam. Maecenas blandit dignissim commodo. Nam sed nulla odio. Donec vel erat neque. Nam tempor sem elit, non fringilla libero vulputate sed. Donec in neque congue, ultrices est et, convallis nibh. Nulla vestibulum sit amet turpis nec dapibus. Cras dignissim, nunc id bibendum fermentum, ex eros egestas purus, ut pharetra leo nulla quis erat. Nulla tempus libero sit amet auctor luctus. Aliquam vel euismod nulla. Proin id urna nibh. Suspendisse vestibulum eu ipsum vitae egestas.
 
         Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse massa sapien, aliquet vel dolor et, vulputate feugiat velit. Morbi aliquam metus aliquam laoreet faucibus. Mauris sit amet pretium quam. Curabitur mollis ex dolor, quis consectetur turpis eleifend eu. Praesent pulvinar lobortis lorem non faucibus. Mauris a accumsan dolor, consequat accumsan diam.
@@ -55,8 +81,12 @@
     <footer>
       &copy; 2017 Said Mattar | MY Projects | <span id="collaborators"> </span> Collaborators
     </footer>
+    <!-- <script src="githubtoken.js"></script> -->
     <script src="scripts/models/script.js"></script>
     <script src="scripts/views/sreenview.js"></script>
+    <script src="scripts/models/repo.js"></script>
+    <script src="scripts/views/repoView.js"></script>
+    <script
     <script src="scripts/controllers/aboutController.js"></script>
     <script src="scripts/controllers/contactController.js"></script>
     <script src="scripts/controllers/projectController.js"></script>
